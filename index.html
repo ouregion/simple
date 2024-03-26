@@ -1,0 +1,67 @@
+<html>
+<head>
+  <title>Your Page Title</title>
+  <link rel="stylesheet" type="text/css" href="style.css"> <!-- Add your CSS file here -->
+  <script src="config.js"></script>
+</head>
+<body>
+  <!-- Introduction Section -->
+  <header>
+    <h1>Welcome to Our Site</h1>
+    <p>Brief description or tagline here.</p>
+  </header>
+
+  <!-- Chatbot Icon -->
+  <ion-icon class='open-button' name="chatbox-ellipses-outline" onclick="openBot()"></ion-icon>
+
+  <!-- Chatbot Popup -->
+  <div class="chat-popup" id="myBot">
+    <div class="bot-container">
+      <iframe class="chat-bot" allow="camera;microphone"></iframe>
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              var iframe = document.querySelector(".chat-bot");
+              var baseUrl = "https://www.agentize.ai/agents/";
+              iframe.src = baseUrl + agentId + "?headerless";
+          });
+      </script>
+      <ion-icon class='btn' name="close-outline" onclick="closeBot()"></ion-icon>
+    </div>
+  </div>
+
+  <!-- Features or Services Section -->
+  <section id="features">
+    <h2>Our Features</h2>
+    <p>Details about your features or services.</p>
+    <!-- Add more content here -->
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <!-- Add testimonials here -->
+  </section>
+
+  <!-- Gallery or Portfolio Section -->
+  <section id="gallery">
+    <h2>Our Portfolio</h2>
+    <!-- Add images or portfolio items here -->
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <!-- Add contact form or details -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright © Your Company Name</p>
+    <!-- Add social media links -->
+  </footer>
+
+  <!-- Ionicons Script -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
